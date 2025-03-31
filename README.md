@@ -22,5 +22,14 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Windows Server 2022
 - Windows 10 (21H2)
 
+<h2> Set up </h2>
+To create users for our domain we need to make sure that users in the domain are able to connect to RDP(remote desktop protocol). First we are going to log into CLient-1 under our admin account Not_spiderman. Open system properties, click remote desktop and allow domain users to acces RDP.
+
+![a1](https://github.com/user-attachments/assets/5cae0676-d3ca-4486-8620-ea2611952ab8)
+![ade1](https://github.com/user-attachments/assets/b738e3d6-855f-47af-ac11-0ed9ef9a1e84)
+![ade3](https://github.com/user-attachments/assets/cb49230f-875a-4d0a-86f8-6b68fd4817ba)
+
 <h2> Creating Users </h2>
+Now that we have the set up done lets creat those users. First lets log into DC-1 and open powershell_ise as administrator. Go to new script and paste the [script](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1)
+
 
