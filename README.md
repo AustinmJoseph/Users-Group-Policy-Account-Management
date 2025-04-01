@@ -30,6 +30,26 @@ To create users for our domain we need to make sure that users in the domain are
 ![ade3](https://github.com/user-attachments/assets/cb49230f-875a-4d0a-86f8-6b68fd4817ba)
 
 <h2> Creating Users </h2>
-Now that we have the set up done lets creat those users. First lets log into DC-1 and open powershell_ise as administrator. Go to new script and paste the [script](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1)
+
+Now that we have the set up done lets creat those users. First lets log into DC-1 and open powershell_ise as administrator. Go to new script and paste the [script](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1) I chose to do 10 employees for this lab and kept the password the same. Go under Active Directory Users and Computers go to _EMPLOYEES and you can see the random ones that were made. Choose one of them to log into Client-1 to make sure it works.
+
+![ade4](https://github.com/user-attachments/assets/5e76d72e-5158-4805-9ee2-e78872c213c1)
+![a5](https://github.com/user-attachments/assets/2d3e4d7f-f8af-4788-b0dd-e5811bcdfa5f)
+![a6](https://github.com/user-attachments/assets/d600d0b8-7755-4613-9e47-5383ae751ee7)
+![a7](https://github.com/user-attachments/assets/0b76e7d1-22db-4165-bdc8-b55ebb32c812)
+
+![a8](https://github.com/user-attachments/assets/ae4f9b43-7136-4715-bd78-8a755e8f2308)
+
+![a9](https://github.com/user-attachments/assets/dcbf54b1-5ff2-4303-a3d6-ed71df57bca0)
+
+<h2> Group Policy and Account Managment</h2>
+
+
+
+
+
+
+
+
 
 
