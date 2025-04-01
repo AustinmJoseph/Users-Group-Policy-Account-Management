@@ -3,7 +3,11 @@
 </p>
 
 <h1>Curating Users, using Group policy and Managing Accounts</h1>
-This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
+
+This tutorial demonstrates how to create and manage individual users, as well as how to efficiently manage multiple users at once using group policies.<br /> 
+
+If you need to set up Active Directory go [here](https://github.com/AustinmJoseph/AD-Setup)
+
 
 <h2>Environments and Technologies Used</h2>
 
