@@ -5,17 +5,13 @@
 <h1>Curating Users, using Group policy and Managing Accounts</h1>
 This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
 
-
-<h2>Video Demonstration</h2>
-
-- ### [YouTube: How to Deploy on-premises Active Directory within Azure Compute](https://www.youtube.com)
-
 <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
 - Active Directory Domain Services
 - PowerShell
+- Active Directory Users and Computers(ADUC)
 
 <h2>Operating Systems Used </h2>
 
@@ -31,7 +27,7 @@ To create users for our domain we need to make sure that users in the domain are
 
 <h2> Creating Users </h2>
 
-Now that we have the set up done lets creat those users. First lets log into DC-1 and open powershell_ise as administrator. Go to new script and paste the [script](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1) I chose to do 10 employees for this lab and kept the password the same. Go under Active Directory Users and Computers go to _EMPLOYEES and you can see the random ones that were made. Choose one of them to log into Client-1 to make sure it works.
+Now that we have the set up done lets creat those users. First lets log into DC-1 and open powershell_ise as administrator. Go to new script and paste the [script](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1) I chose to do 10 employees for this lab and kept the password the same. Go under ADUC go to _EMPLOYEES and you can see the random ones that were made. Choose one of them to log into Client-1 to make sure it works.
 
 ![ade4](https://github.com/user-attachments/assets/5e76d72e-5158-4805-9ee2-e78872c213c1)
 ![a5](https://github.com/user-attachments/assets/2d3e4d7f-f8af-4788-b0dd-e5811bcdfa5f)
@@ -43,6 +39,9 @@ Now that we have the set up done lets creat those users. First lets log into DC-
 ![a9](https://github.com/user-attachments/assets/dcbf54b1-5ff2-4303-a3d6-ed71df57bca0)
 
 <h2> Group Policy and Account Managment</h2>
+
+ To practice with group policy we are going to set a new group policy and intentionally lock one of our employees out and set reset/ unlock there account. First log into DC-1 and open run, and enter gpmc.msc. This should open the group policy management console then open until you get to Default Domain Policy then right click it and click edit. Once you get to the Domain Policy Management Editor go to Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Account Lockout Policy.
+Then click Account Lockout THreshold and set it to 5. Once youve applied the policy open client one to force it with your admin account in Command prompt use gpupdate /force. Now try to log in 6 times with one of your employee accounts and enter the wrong password 6 times. Then head back into DC-1 and go to ADUC and click the users go to the user thats locked out double click go to the account tab and unlock Account and try to log in after it should work. Now we are going to  disable the same account and try to log in and re enable and log in. 
 
 
 
