@@ -33,9 +33,6 @@ Log into Client-1 using the admin account Not_Spiderman. Open System Properties,
 
 <h2> Creating Users </h2>
 
-Now that we have the set up done lets creat those users. First lets log into DC-1 and open powershell_ise as administrator. Go to new script and paste the [script](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1) I chose to do 10 employees for this lab and kept the password the same. Go under ADUC go to _EMPLOYEES and you can see the random ones that were made. Choose one of them to log into Client-1 to make sure it works.
-
-
 Now that the setup is complete, let’s create the users.
 
 First, log into DC-1 and open PowerShell ISE as an administrator. Click on New Script and paste the [script](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1). For this lab, I created 10 employees and kept the password the same.
