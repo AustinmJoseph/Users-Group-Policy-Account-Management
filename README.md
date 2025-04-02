@@ -70,23 +70,23 @@ gpupdate /force
 
 This forces the Group Policy update on the machine.
 
-Step 3: Lock an Employee Account
+- Step 3: Lock an Employee Account
 	1.	Attempt to log in 6 times using an employee account with the wrong password.
 	2.	The account should now be locked.
 
-Step 4: Unlock the Account in ADUC
+- Step 4: Unlock the Account in ADUC
 	1.	On DC-1, open Active Directory Users and Computers (ADUC).
 	2.	Navigate to _EMPLOYEES, find the locked account, and double-click it.
 	3.	Go to the Account tab, check Unlock Account, and apply the changes.
 	4.	Try logging in again—it should now work.
 
-Step 5: Disable and Re-Enable the Account
+- Step 5: Disable and Re-Enable the Account
 	1.	In ADUC, right-click the same user and select Disable Account.
 	2.	Try logging in—it should fail.
 	3.	Go back to ADUC, right-click the user, and select Enable Account.
 	4.	Log in again—it should now work.
 
-Step 6: Check Event Logs
+- Step 6: Check Event Logs
 
 For additional monitoring, open Event Viewer, search for the employee’s name, and review the logs to track login attempts and account changes.
 
