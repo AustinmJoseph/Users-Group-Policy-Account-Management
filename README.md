@@ -6,7 +6,7 @@
 
 This tutorial demonstrates how to create and manage individual users, as well as efficiently manage multiple users at once using group policies.
 
-If you need to set up Active Directory, refer to my [Active Directory Setup]()tutorial.
+If you need to set up Active Directory, refer to my [Active Directory Setup](https://github.com/AustinmJoseph/AD-Setup) tutorial.
 
 <h2>Environments and Technologies Used</h2>
 
