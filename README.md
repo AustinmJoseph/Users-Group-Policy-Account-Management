@@ -4,10 +4,9 @@
 
 <h1>Curating Users, using Group policy and Managing Accounts</h1>
 
-This tutorial demonstrates how to create and manage individual users, as well as how to efficiently manage multiple users at once using group policies.<br /> 
+This tutorial demonstrates how to create and manage individual users, as well as efficiently manage multiple users at once using group policies.
 
-If you need to set up Active Directory refer to my [Active Direvtory Setup](https://github.com/AustinmJoseph/AD-Setup) tutorial.
-
+If you need to set up Active Directory, refer to my [Active Directory Setup]()tutorial.
 
 <h2>Environments and Technologies Used</h2>
 
