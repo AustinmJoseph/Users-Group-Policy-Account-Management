@@ -22,7 +22,10 @@ If you need to set up Active Directory, refer to my [Active Directory Setup](htt
 - Windows 10 (21H2)
 
 <h2> Set up </h2>
-To create users for our domain we need to make sure that users in the domain are able to connect to RDP(remote desktop protocol). First we are going to log into CLient-1 under our admin account Not_spiderman. Open system properties, click remote desktop and allow domain users to acces RDP.
+
+To create users for our domain, we first need to ensure that domain users can connect via RDP (Remote Desktop Protocol).
+
+Log into Client-1 using the admin account Not_Spiderman. Open System Properties, navigate to Remote Desktop, and allow domain users to access RDP.
 
 ![a1](https://github.com/user-attachments/assets/5cae0676-d3ca-4486-8620-ea2611952ab8)
 ![ade1](https://github.com/user-attachments/assets/b738e3d6-855f-47af-ac11-0ed9ef9a1e84)
@@ -31,6 +34,14 @@ To create users for our domain we need to make sure that users in the domain are
 <h2> Creating Users </h2>
 
 Now that we have the set up done lets creat those users. First lets log into DC-1 and open powershell_ise as administrator. Go to new script and paste the [script](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1) I chose to do 10 employees for this lab and kept the password the same. Go under ADUC go to _EMPLOYEES and you can see the random ones that were made. Choose one of them to log into Client-1 to make sure it works.
+
+
+Now that the setup is complete, let’s create the users.
+
+First, log into DC-1 and open PowerShell ISE as an administrator. Click on New Script and paste the [script](https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1). For this lab, I created 10 employees and kept the password the same.
+
+Next, open Active Directory Users and Computers (ADUC), navigate to _EMPLOYEES, and you should see the randomly generated users. Choose one of them and log into Client-1 to verify that it works.
+
 
 ![ade4](https://github.com/user-attachments/assets/5e76d72e-5158-4805-9ee2-e78872c213c1)
 ![a5](https://github.com/user-attachments/assets/2d3e4d7f-f8af-4788-b0dd-e5811bcdfa5f)
