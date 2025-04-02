@@ -64,9 +64,7 @@ Computer Configuration > Policies > Windows Settings > Security Settings > Accou
 
 - Step 2: Enforce the Policy on Client-1
 	1.	Log into Client-1 using your admin account.
-	2.	Open Command Prompt and enter:
-
-gpupdate /force
+	2.	Open Command Prompt and enter: gpupdate /force
 
 This forces the Group Policy update on the machine.
 
