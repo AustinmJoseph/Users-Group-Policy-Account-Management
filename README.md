@@ -51,10 +51,53 @@ Next, open Active Directory Users and Computers (ADUC), navigate to _EMPLOYEES, 
 
 <h2> Group Policy and Account Managment</h2>
 
- To practice with group policy we are going to set a new group policy and intentionally lock one of our employees out and set reset/ unlock there account. First log into DC-1 and open run, and enter gpmc.msc. This should open the group policy management console then open until you get to Default Domain Policy then right click it and click edit. Once you get to the Domain Policy Management Editor go to Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Account Lockout Policy.
-Then click Account Lockout THreshold and set it to 5. Once youve applied the policy open client one to force it with your admin account in Command prompt use gpupdate /force. Now try to log in 6 times with one of your employee accounts and enter the wrong password 6 times. Then head back into DC-1 and go to ADUC and click the users go to the user thats locked out double click go to the account tab and unlock Account and try to log in after it should work. Now we are going to  disable the same account and try to log in and re enable and log in. Go back into ADUC go into employees and right click the user to disable the account then try to log in it should fail the go back and re enable and it should work this is one of the many things you can do. You can also check the logs by going into the Event Viewer and right clicking looking up your employees name.
 
-![a10](https://github.com/user-attachments/assets/d83ff7b3-5602-4339-b089-de0f03b65987)
+To practice working with Group Policy, we will create a new policy to intentionally lock an employee out, then reset and unlock their account.
+
+Step 1: Configure Account Lockout Policy
+	1.	Log into DC-1, open Run, and enter gpmc.msc to open the Group Policy Management Console (GPMC).
+	2.	Navigate to Default Domain Policy, right-click it, and select Edit.
+	3.	In the Group Policy Management Editor, go to:
+Computer Configuration > Policies > Windows Settings > Security Settings > Account Policies > Account Lockout Policy.
+	4.	Click Account Lockout Threshold and set it to 5 failed attempts.
+	5.	Apply the policy.
+
+Step 2: Enforce the Policy on Client-1
+	1.	Log into Client-1 using your admin account.
+	2.	Open Command Prompt and enter:
+
+gpupdate /force
+
+This forces the Group Policy update on the machine.
+
+Step 3: Lock an Employee Account
+	1.	Attempt to log in 6 times using an employee account with the wrong password.
+	2.	The account should now be locked.
+
+Step 4: Unlock the Account in ADUC
+	1.	On DC-1, open Active Directory Users and Computers (ADUC).
+	2.	Navigate to _EMPLOYEES, find the locked account, and double-click it.
+	3.	Go to the Account tab, check Unlock Account, and apply the changes.
+	4.	Try logging in again—it should now work.
+
+Step 5: Disable and Re-Enable the Account
+	1.	In ADUC, right-click the same user and select Disable Account.
+	2.	Try logging in—it should fail.
+	3.	Go back to ADUC, right-click the user, and select Enable Account.
+	4.	Log in again—it should now work.
+
+Step 6: Check Event Logs
+
+For additional monitoring, open Event Viewer, search for the employee’s name, and review the logs to track login attempts and account changes.
+
+This exercise demonstrates how Group Policy can be used to enforce security measures and how ADUC can be used to manage user accounts efficiently.
+
+
+
+
+
+
+ ![a10](https://github.com/user-attachments/assets/d83ff7b3-5602-4339-b089-de0f03b65987)
 ![ade1](https://github.com/user-attachments/assets/f15db34c-482b-471f-8767-28420dd832cc)
 ![ade2](https://github.com/user-attachments/assets/8548358e-ebe1-4767-96f9-e5da1aaf8ae5)
 ![ade3](https://github.com/user-attachments/assets/54322d9f-2cf7-4414-9268-09d62e05e6cd)
